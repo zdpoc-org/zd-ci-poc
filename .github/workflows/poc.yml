@@ -6,7 +6,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
-    uses: ultimateai/workflows/.github/workflows/manual-deploy.yml@a5c4e7cf005113de2c9687d436c35fb7f30d0b29
+    uses: zdpoc-org/workflows/.github/workflows/manual-deploy.yml@a5c4e7cf005113de2c9687d436c35fb7f30d0b29
     secrets: inherit
     with:
       image_repo: europe-docker.pkg.dev/poc/poc
@@ -14,10 +14,10 @@ jobs:
       environment: staging
       github_email: poc@example.com
       github_user: poc
-      k8s_manifests_repo: sanjaygithub0/zd-ci-poc
+      k8s_manifests_repo: zdpoc-org/zd-ci-poc
       app_names: pocapp
       region: europe
       runner: ubuntu-latest
-      e2e_repo: sanjaygithub0/zd-ci-poc
+      e2e_repo: zdpoc-org/zd-ci-poc
       e2e_projects: '["chromium"]'
       e2e_bucket_name: poc-bucket
